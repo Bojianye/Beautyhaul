@@ -1,0 +1,51 @@
+@import "../../../common.scss";
+
+.header-close-container {
+  width: 100%;
+  .navbar-pink {
+    background-color: $nav-background-color;
+  }
+  .navbar-font-color {
+    color: white;
+  }
+  .title{
+    font-size: 1rem;
+  }
+
+  .breadcrumb-container {
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    .breadcrumb {
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 0.4rem 1rem;
+      background-color: $nav-background-color;
+      .breadcrumb-item {
+        color: #00819e;
+        float: none;
+        font-size: 1rem;
+        font-family: $font-mon;
+        a {
+          color: #00819e;
+        }
+      }
+      .active {
+        color: $main-font-color;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .nav-loginBtn{
+    right: 0;
+    position: absolute;
+    font-size: 1rem;
+    color: $high-light-color;
+    font-family: $font-mon;
+    padding-top: 3px;
+  }
+
+  i{
+    font-size: 1rem;
+  }
+}

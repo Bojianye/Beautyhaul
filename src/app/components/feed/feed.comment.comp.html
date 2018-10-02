@@ -1,0 +1,83 @@
+<div class="feed-view-container">
+  <div class="feed-comments-container">
+    <div class="card rounded-0 border-0 comments margin-top-10">
+      <h3 class="card-header border-0 rounded-0">Comments</h3>
+
+
+      <div class="comment-input row" *ngIf="isLoggedinUser">
+        <div class="avatar-content col d-flex">
+          <avatar-view name={{author}} imageSrc={{avatar}} sizeType='S'></avatar-view>
+        </div>
+        <md-input-container class="input-container col">
+          <input
+            mdInput
+            placeholder="Leave a comment"
+            [(ngModel)]="comment"
+            (input)="commentChanged($event)"
+          />
+        </md-input-container>
+        <div class="col send-button">
+          <div (click)="addFeedComment()" class="send-button">
+            Send
+          </div>
+        </div>
+      </div>
+      <div class="comment-alert" *ngIf="commentAlert">
+        <span class="ion-android-warning"></span> {{errorMessage}}
+      </div>
+
+
+      <div class="login-requires" *ngIf="!isLoggedinUser">
+        <a routerLink="/login">Sign in</a> to leave a comment.
+      </div>
+      <div *ngFor="let comment of feedComments">
+        <div class="media">
+          <div class="d-flex align-self-start mr-3">
+            <avatar-view name={{comment.authorName}} imageSrc={{comment.authorAvatar}} sizeType='S'></avatar-view>
+            <!--<img class="d-flex align-self-start mr-3 rounded-circle" src="{{comment.authorAvatar}}" alt="{{comment.authorName}}" width="32">-->
+          </div>
+          <div class="media-body">
+            <div class="reply-name">{{comment.authorName}}</div>
+            <div class="comment" [innerHTML]="comment.content | htmlLinkRemove"></div>
+          </div>
+        </div>
+        <hr/>
+      </div>
+      <div *ngFor="let youtubeComment of youtubeComments">
+        <div class="card-block" *ngFor="let comment of youtubeComment.comments">
+          <div class="media">
+                <span class="d-flex align-self-start mr-3">
+                    <avatar-view name={{comment.authorName}} imageSrc={{comment.authorAvatar}}
+                                 sizeType='S'></avatar-view>
+                </span>
+            <div class="media-body">
+              <div class="reply-name">{{comment.authorName}}</div>
+              <div class="comment" [innerHTML]="comment.content | htmlLinkRemove"></div>
+              <div *ngIf="comment.hasReplies">
+                <div class="media mt-3" *ngFor="let reply of comment.replies">
+                        <span class="d-flex pr-3">
+                            <avatar-view name={{reply.authorName}} imageSrc={{reply.authorAvatar}}
+                                         sizeType='S'></avatar-view>
+                        </span>
+                  <div class="media-body">
+                    <div class="mt-0 reply-name">{{reply.authorName}}</div>
+                    <div class="comment" [innerHTML]="reply.content | htmlLinkRemove"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr/>
+        </div>
+      </div>
+      <!--<div class="show-more">-->
+        <!--<button type='button' class="btn btn-primary-outline btn-block rounded-5" (click)="showMore()"-->
+                <!--*ngIf="youtubeNextPageToken">-->
+          <!--<span *ngIf="isLoading"><i class="fa fa-spinner fa-spin fa-fw"></i><span-->
+            <!--class="sr-only">Loading...</span></span>-->
+          <!--Show more-->
+        <!--</button>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="showmore-container">
+  <p [innerHTML]="description"></p>
+  <div class="toggle" *ngIf="isDisplayShowMore">
+    <button (click)="toggleShowMore()" type="button" class="btn btn-primary-outline btn-sm btn-block">
+      Show {{isShowMore ? 'more' : 'less'}}
+    </button>
+  </div>
+</div>

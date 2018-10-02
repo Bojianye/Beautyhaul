@@ -1,0 +1,29 @@
+@import "../../../common.scss";
+.header-back-container {
+  z-index: 1040;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  .navbar-pink {
+    color: $nav-text-color;
+    background-color: $nav-background-color;
+  }
+  .navbar-font-color {
+    color: white;
+  }
+  .title{
+    font-size: 1rem;
+    color: $nav-text-color;
+    margin-left: 1em;
+  }
+  .nav-loginBtn{
+    color: $nav-text-color;
+    font-size: 1rem;
+    color: $high-light-color;
+    right: 0;
+    position: absolute;
+    font-family: $font-mon;
+    padding-top: 4px;
+  }
+
+}

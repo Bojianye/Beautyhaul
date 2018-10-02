@@ -1,0 +1,95 @@
+@import "../../../common.scss";
+
+.card-large {
+  .cover {
+    position: relative;
+    width: 100%;
+    min-height: 170px;
+    padding-bottom: 55.25%;
+    .thumbnail {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      overflow: hidden;
+    }
+  }
+  .card-block {
+    padding: 0.5rem 0;
+    .card-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.65rem;
+      font-family: $font-mon;
+      a{
+        color: $main-font-color;
+      }
+    }
+    .avatar {
+      width: 48px;
+    }
+    .meta {
+      color: $second-font-color;
+      font-size: 0.7rem;
+      span {
+        margin-right: 0.1rem;
+      }
+    }
+    .p-2 {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+.card-medium {
+  width: 196px;
+  .cover {
+    position: relative;
+    width: 100%;
+    min-height: 109px;
+    .thumbnail {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      overflow: hidden;
+    }
+  }
+  .card-block {
+    padding: 0.5rem 0;
+    border: 0;
+    .card-title {
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+      font-family: $font-mon;
+    }
+    .meta {
+      font-size: 0.7rem;
+      color: $second-font-color;
+      p {
+        margin-bottom: 0.3rem;
+        span {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+  }
+}

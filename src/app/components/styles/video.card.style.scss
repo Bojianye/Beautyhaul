@@ -1,0 +1,134 @@
+@import "../../../common.scss";
+.card {
+  margin: 0;
+  margin-bottom: 10px;
+  border: 1px solid #F7F5F5;
+  @media screen and (max-width: $s-screen) {
+    border: none;
+  }
+  a {
+    color: black;
+  }
+  .card-block {
+    padding: 10px;
+  }
+  .card-subtitle {
+    line-height: 22px;
+    font-weight: 500;
+    font-family: $font-mon;
+    @media screen and (max-width: $s-screen) {
+      line-height: 22px;
+      font-weight: 500;
+    }
+    @media screen and (min-width: $m-screen) {
+      font-size: 0.7rem;
+      line-height: 14px;
+      font-weight: normal;
+    }
+    @media screen and (min-width: $l-screen) {
+      font-size: 0.9rem;
+      line-height: 14px;
+      font-weight: 500;
+    }
+  }
+  .avatar {
+    width: 48px;
+    @media screen and (min-width: $m-screen) {
+      display: none;
+    }
+    @media screen and (min-width: $l-screen) {
+      display: block;
+    }
+  }
+  .text-avatar {
+    width: 48px;
+    height: 48px;
+    background-color: $pink-color;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    font-family: $font-mon;
+    font-size: 1.1rem;
+    border-radius: 48px;
+  }
+  .description {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    @media screen and (min-width: $m-screen) {
+      height: 70px;
+    }
+  }
+  .card-text {
+
+  }
+  .introduction {
+    height: 100%;
+    @media screen and (min-width: $m-screen) {
+      height: 80px;
+      overflow: hidden;
+    }
+    @media screen and (min-width: $l-screen) {
+      height: 80px;
+      overflow: hidden;
+    }
+  }
+  .cover {
+    position: relative;
+    width: 100%;
+    min-height: 195px;
+    padding-bottom: 55.25%;
+    .thumbnail {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      overflow: hidden;
+    }
+    .play {
+      position: absolute;
+      font-size: 1.7rem;
+      color: $pink-color;
+      left: 40%;
+      top: 33%;
+      text-shadow: 1px 1px white;
+    }
+  }
+  .meta {
+    span {
+      margin-right: 5px;
+      font-weight: 400;
+      i {
+        font-size: 1.45rem;
+        @media screen and (max-width: $s-screen) {
+          font-size: 1.45rem;
+        }
+        @media screen and (min-width: $m-screen) {
+          font-size: 1rem;
+        }
+        @media screen and (min-width: $l-screen) {
+          font-size: 1.45rem;
+        }
+        margin-right: 2px;
+        color: $pink-color;
+        vertical-align: middle;
+      }
+      .counter {
+        vertical-align: middle;
+        font-size: 0.9rem;
+        @media screen and (max-width: $s-screen) {
+          font-size: 0.9rem;
+        }
+        @media screen and (min-width: $m-screen) {
+          font-size: 0.7rem;
+        }
+        @media screen and (min-width: $l-screen) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

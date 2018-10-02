@@ -1,0 +1,132 @@
+@import "../../../common";
+
+
+
+//From BootStrap 3.x
+img {
+  vertical-align: middle;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+.panel {
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #fff;
+  border-radius: 4px;
+
+}
+.panel-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.panel-heading {
+  padding: 0 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+
+
+#profile-container {
+  text-align: left;
+  font-family: $font-mon;
+  background-color: white;
+  padding-bottom: 20px;
+  padding-top: 40px;
+
+  .user-profile-avatar{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+
+  .account-info-area{
+    text-align: left;
+    .expenditure{
+      padding-top: 2em;
+    }
+  }
+  .input-text{
+    padding-top: 10px;
+    width: 100%;
+  }
+  .form-title{
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .preference-secection{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  .input-select{
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .input-select-knowledge{
+    padding-top: 30px;
+  }
+
+  .eth-section{
+    //margin-top: -20px;
+    margin-left: 10px;
+  }
+  .small-space{
+    margin-top: -20px;
+  }
+  .always-show-title{
+    color: rgba(0,0,0,.38);
+    font-size: 0.8rem;
+  }
+
+  .date-select-table{
+    margin-top: 10px;
+    width: 100%;
+  }
+  .comment-alert{
+    color: red;
+  }
+
+  .mat-select {
+    font-family: $font-mon;
+  }
+
+  td{
+    width: 30%;
+  }
+  .date-select{
+    width: 98%;
+  }
+
+  .table-td{
+    padding-left: 10px;
+  }
+
+  .after-birthday{
+    margin-top: 20px;
+  }
+
+  .mat-input-element:disabled{
+    color: #333333;
+  }
+
+}
+
+
+.mat-option{
+  font-family: $font-mon;
+}
+

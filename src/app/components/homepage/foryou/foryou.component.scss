@@ -1,0 +1,54 @@
+@import "../../../../common";
+
+.video-recommend-container {
+  margin-top: 0;
+  .container {
+    @media screen and (max-width: $s-screen) {
+      padding: 0;
+      overflow: hidden;
+    }
+    .banner {
+      @media screen and (min-width: $m-screen) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.video-loading {
+  text-align: center;
+  margin-top: 4rem;
+}
+@media screen and (max-width: $s-screen) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row div{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: $m-screen) {
+  margin-bottom: 10px;
+}
+
+
+.item {
+  margin-top: 0.5rem;
+
+  .video-card{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    @media screen and (min-width: $s-screen){
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  padding-bottom: 0.5rem;
+}
+
+.show-more{
+  text-align: center;
+  color: $high-light-color;
+}

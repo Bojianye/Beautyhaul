@@ -1,0 +1,74 @@
+@import "../../../common.scss";
+
+.header-back-container {
+  .navbar-pink {
+    background-color: $dark-color;
+  }
+  .navbar-font-color {
+    color: white;
+  }
+  .breadcrumb-container {
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    .breadcrumb {
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 0.4rem 1rem;
+      background-color: $grey-color;
+      .breadcrumb-item {
+        color: #00819e;
+        float: none;
+        font-size: 1rem;
+        font-family: $font-mon;
+        a {
+          color: #00819e;
+        }
+      }
+      .active {
+        color: $dark-color;
+        font-weight: 500;
+      }
+    }
+  }
+  .trends-container {
+    width: 100%;
+    position: relative;
+    display: block;
+    min-height: 3rem;
+    background-color: $grey-color;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    .trends-label {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.9rem 0.3rem 0.9rem 0.7rem;
+      font-weight: bold;
+      // ::after {
+      //   content: "";
+      //   display: block;
+      //   background-image: url(https://p-airnz.com/cms/static/master-2212/themes/airnz003/images/arrow.png);
+      //   background-repeat: no-repeat;
+      //   height: 55px;
+      //   width: 24px;
+      //   position: absolute;
+      //   top: 0;
+      //   right: 5px;
+      //   background-size: 100% 100%;
+      // }
+    }
+    .trends-tags {
+      padding: 0.5rem;
+      margin-left: 4rem;
+      overflow-x: auto;
+      .tag {
+        margin-right: 3px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+
+        background-color: $grey-light-color;
+        color: $dark-color;
+      }
+    }
+  }
+}

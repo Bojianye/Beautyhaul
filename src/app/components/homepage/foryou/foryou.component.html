@@ -1,0 +1,27 @@
+<div class="video-recommend-container">
+  <div class="video-loading" *ngIf="isLoading">
+    <div class="bh-spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+  <div class="video-loading" *ngIf="!hasVideos">
+    Sorry, no results yet.
+  </div>
+  <div class="row">
+    <div class="item col-sm-4" *ngFor="let feed of feeds">
+      <h2 id="{{feed.id}}"></h2>
+      <div class="video-card" (click)="linkFeed(feed.id)">
+        <feed-card-large
+          title={{feed.title}}
+          thumbnail={{feed.thumbnail}}
+          avatar={{feed.author.avatar}}
+          author={{feed.author.displayName}}
+          views={{feed.viewCount}}
+          comments={{feed.commentCount}}
+          feedId="{{feed.id}}">
+        </feed-card-large>
+      </div>
+    </div>
+  </div>
+</div>

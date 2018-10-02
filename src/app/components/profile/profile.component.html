@@ -1,0 +1,44 @@
+<header-close [categoryId]="categoryId" (closed)="closedBtnDidClicked()" [title]="'PROFILE'" [buttonTitle]="'Sign out'"
+              (rightButton)="logout()"></header-close>
+<div class="container user-profile-container">
+  <div class="header row">
+    <div class="user-profile-avatar col-4">
+      <span class="mx-auto d-block">
+        <avatar-view name={{userInfo.name}} imageSrc={{userInfo.avatar}} sizeType="XL"></avatar-view>
+      </span>
+    </div>
+    <div class="user-information-container col-8">
+      <div class="user-information">
+        <div class="username">{{(userInfo.firstName + ' ' + userInfo.lastName) | stringLimit:10}}</div>
+      </div>
+      <div class="edit-profile">
+        <button class="edit-button" (click)="editProfile()">View and edit profile</button>
+      </div>
+    </div>
+  </div>
+  <div class="control-area row">
+    <div class="control-title col-6">Saved</div>
+  </div>
+  <div class="content-list-container">
+    <div class="video-loading" *ngIf="feeds.length == 0">
+      No favourites yet.
+    </div>
+    <div class="row">
+    <div class="card-block col-sm-4" *ngFor="let feed of feeds" (click)="linkFeed(feed)">
+      <div class="d-flex flex-row">
+        <div class="p-2">
+          <img class="avatar" src="{{feed.thumbnail}}" alt="test">
+        </div>
+        <div class="p-2 info-content">
+          <div class="card-title">{{feed.title | stringLimit : 50 }}</div>
+          <div class="meta">
+            <span>{{feed.author.displayName | stringLimit : 10}}</span>
+            <span *ngIf="feed.feedType === 'VIDEO'">{{feed.viewCount | countDisplay}} views</span>
+            <span>{{feed.commentCount | countDisplay}} comments</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

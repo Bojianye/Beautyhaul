@@ -1,0 +1,23 @@
+{
+	"title" : "beautyhaul - we love makeup, don't you？",
+	"externalStyles" : [
+	  "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossorigin='anonymous'>",
+	  "<link rel='stylesheet' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>",
+    "<link rel='stylesheet' type='text/css' href='/node_modules/angular2-toaster/toaster.css' />",
+		"<link href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css' rel='stylesheet'>",
+		"<link rel='icon' href='https://s3-ap-southeast-2.amazonaws.com/stylish-ui-resources/static/favicon.png' type='image/x-icon' />",
+		"<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato%3A300%7CMontserrat%3A400%2C700%2C300%7CPlayfair+Display%3A400italic%7CPermanent+Marker%3A400&#038;subset=latin&#038;ver=4.5.9' type='text/css' media='all' />"
+  ],
+	 "externalScripts" : [
+	 	"<script src='https://use.fontawesome.com/967773bb62.js'></script>",
+		"<script src='https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js'></script>",
+		"<script src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js'></script>",
+		"<script src='https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js'></script>",
+		"<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js'></script>"
+	 ],
+	 "metaTags" : [
+	 	{ "name" : "description", "content" : "beautyhaul" },
+	 	{ "name" : "keywords", "content" : "beautyhaul, beauty, haul, Makeup, Social Community" },
+	 	{ "name" : "author", "content" : "beautyhaul" }
+	 ]
+}

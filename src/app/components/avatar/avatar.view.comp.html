@@ -1,0 +1,6 @@
+<img class="rounded-circle image-avatar" src="{{imageSrc}}" alt="test" width="{{size}}" *ngIf="hasAvatarImageSrc; else nameAvatar">
+<ng-template #nameAvatar>
+    <div class="avatar-circle-text" [ngStyle]="{'width' : size + 'px', 'height' : size + 'px'}">
+        <span class="initials" [ngStyle]="{'top' : fontTop + 'px'}">{{firstLetter}}</span>
+    </div>
+</ng-template>

@@ -1,0 +1,36 @@
+<div class="video-recommend-container">
+  <div class="video-loading" *ngIf="isLoading">
+    <div class="bh-spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+  <div class="category" *ngFor="let item of topics">
+    <div class="category-title-bar row">
+      <div class="category-title col-8">
+        {{item.displayName}}
+      </div>
+      <div class="category-show-more col-4 see-all" (click)="showMoreButtonDidClicked(item.category,item.topicId)">
+        See all
+        <i class="icon ion-chevron-right chevron-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="swiper-content">
+      <swiper [config]="swipeConfig">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide video-item" *ngFor="let feed of item.recommendFeeds" (click)="videoItemClicked(i)">
+            <feed-card-medium
+              title={{feed.title}}
+              thumbnail={{feed.thumbnail}}
+              avatar={{feed.author.avatar}}
+              author={{feed.author.displayName}}
+              views={{feed.viewCount}}
+              comments={{feed.commentCount}}
+              feedId={{feed.id}}
+            ></feed-card-medium>
+          </div>
+        </div>
+      </swiper>
+    </div>
+  </div>
+</div>

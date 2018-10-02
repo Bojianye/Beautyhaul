@@ -1,0 +1,119 @@
+@import "../../../common";
+
+.user-profile-container {
+  font-family: $font-mon;
+  margin-top: 1em;
+  .header {
+    margin-top: 0.5em;
+    height: auto;
+    .user-profile-avatar {
+      padding-right: 0.5em;
+      .img-circle {
+        border-radius: 50%;
+      }
+    }
+    .user-information-container {
+      padding-top: 10px;
+      padding-left: 23px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: left;
+      font-size: 1.1rem;
+      .username {
+        font-size: 1.5rem;
+
+      }
+      .user-email {
+        font-size: 0.8em;
+        color: $grey-dark-color;
+      }
+      .edit-profile {
+        margin-top: 0.3em;
+        padding: 0;
+        .edit-button {
+          color: $high-light-color;
+          font-size: 0.9rem;
+          margin: 0;
+          line-height: normal;
+          border: $high-light-color 1px solid;
+          background: transparent;
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  .control-area {
+    margin: 1em -14px 3px -14px;
+    border-top: rgba(0, 0, 0, 0.1) 1px solid;
+    line-height: 1em;
+    .control-title {
+      padding-top: 0.5em;
+      padding-left: 0.5em;
+      line-height: inherit;
+      vertical-align: middle;
+      color: $third-font-color;
+
+    }
+    .control-icon {
+      padding-right: 0.8em;
+      font-size: 1.5em;
+      vertical-align: middle;
+      text-align: right;
+    }
+  }
+
+  .content-list-container {
+    margin-left: -14px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: -14px;
+
+    .card-block {
+      padding: 0;
+      .flex-row{
+        margin-top: 1rem;
+      }
+      .card-title {
+        font-size: 0.7rem;
+        margin-bottom: 0.65rem;
+        font-family: $font-mon;
+        a {
+          color: $main-font-color;
+        }
+      }
+      .avatar {
+        width: 112px;
+        margin-top: -19px;
+        margin-bottom: -19px;
+      }
+      .meta {
+        color: $second-font-color;
+        font-size: 0.6rem;
+        position: absolute;
+        bottom: 0;
+        span {
+          margin-right: 0.1rem;
+        }
+      }
+      .p-2 {
+        padding-left: 5px !important;
+        overflow: hidden;
+        min-width: 118px;
+        /* max-height: 117px; */
+        height: 62px;
+      }
+      .info-content{
+        padding-top: 0 !important;
+        padding-bottom: 0!important;
+      }
+    }
+
+    .video-loading {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+  }
+
+}

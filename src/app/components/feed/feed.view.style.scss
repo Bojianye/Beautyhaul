@@ -1,0 +1,265 @@
+@import "../../../common.scss";
+.header-offset{
+  padding-top: 40px;
+}
+.feed-view-container {
+  .container {
+    @media screen and (max-width: $s-screen) {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+  .action {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    i {
+      font-size: 1.6rem;
+      color: $main-gray-color;
+    }
+    .info {
+      font-size: 0.7rem;
+      color: $main-gray-color;
+      margin-top: 0.4rem;
+    }
+    .highlight {
+      color: $high-light-color;
+    }
+  }
+  .author {
+    .card-subtitle {
+      padding-top: 9px;
+      font-size: 1.2rem;
+    }
+    .subscribers {
+      font-size: 0.8rem;
+      color: $main-gray-color;
+    }
+  }
+  .title {
+    font-family: $font-mon;
+    font-size: 1.2rem;
+  }
+  .view {
+    font-size: 0.8rem;
+    color: $main-gray-color;
+  }
+  .video-view {
+    .play-container {
+      position: relative;
+      @media screen and (max-width: $s-screen) {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1030;
+      }
+      @media screen and (min-width: $m-screen) {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    .description {
+      font-size: 0.8rem;
+      padding: 0 10px 0px 10px;
+      color: $main-gray-color;
+      .title {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .mix-view {
+    .section {
+      .section-text {
+        h2 {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+        .content {
+          color: $main-gray-color;
+        }
+      }
+      .section-image {
+        @media screen and (max-width: $s-screen) {
+          text-align: center;
+        }
+        img {
+          border-radius: 0.2rem;
+        }
+      }
+    }
+    .card{
+      .mixed-header{
+        padding-bottom: 0;
+      }
+    }
+  }
+  .social-share-container {
+    .modal-title {
+      color: $pink-color;
+    }
+    .share-buttons {
+      margin-top: 1rem;
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+      .facebook {
+        color: $facebook-color;
+      }
+      .google {
+        color: $google-color;
+      }
+      .twitter {
+        color: $twitter-color;
+      }
+      .email {
+        color: $email-color;
+      }
+    }
+  }
+  .share-icon {
+    cursor: pointer;
+    margin-right: 5px;
+    font-weight: 400;
+    i {
+      font-size: 1.45rem;
+      @media screen and (max-width: $s-screen) {
+        font-size: 1.45rem;
+      }
+      @media screen and (min-width: $m-screen) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: $l-screen) {
+        font-size: 1.45rem;
+      }
+      margin-right: 2px;
+      color: $pink-color;
+      vertical-align: middle;
+    }
+    .counter {
+      vertical-align: middle;
+      font-size: 0.9rem;
+      @media screen and (max-width: $s-screen) {
+        font-size: 0.9rem;
+      }
+      @media screen and (min-width: $m-screen) {
+        font-size: 0.7rem;
+      }
+      @media screen and (min-width: $l-screen) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .feed-comments-container {
+    h3{
+      font-size: 1.1rem !important;
+    }
+    .card {
+      box-shadow: none;
+      margin-top: 0;
+      .card-header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+        border-bottom: 1px rgba(0,0,0,0.1) solid !important;
+        border-top: 1px rgba(0,0,0,0.1) solid !important;
+        border-collapse: collapse;
+      }
+    }
+    .row {
+      margin: 0;
+    }
+    .toggle {
+      margin: -15px 1em 1em;
+      .send-button {
+        color: $high-light-color;
+        padding-top: 1.2em;
+      }
+    }
+    .comment-input {
+      width: 100%;
+      padding-top: 0.5em;
+      text-align: left;
+      font-size: 0.9em;
+      .input-container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .avatar-content {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 59px;
+        min-width: 59px;
+        width: 41px;
+        padding-top: 1em;
+      }
+    }
+    .send-button{
+      cursor:pointer !important;
+      min-width: 60px;
+      max-width: 60px;
+      color: $high-light-color;
+      padding-top: 0.55rem;
+    }
+    .comment-alert{
+      color: red;
+      margin-top: -15px;
+      font-size: 0.8em;
+      padding-left: 4.5em;
+    }
+    .login-requires {
+      text-align: center;
+      padding: 10px 0 0 0;
+      a {
+        color: $high-light-color;
+      }
+    }
+    margin-bottom: 20px;
+    .card-block {
+      padding: 5px 0;
+    }
+    hr {
+      margin: 0 10px;
+    }
+    .card-header {
+      background-color: $main-background-color;
+      font-size: 0.9rem;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      color: $main-gray-color;
+      &:first-child {
+        border-radius: 0;
+      }
+    }
+    .media{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .media-body {
+      .reply-name {
+        font-size: 1rem;
+        color: $main-font-color;
+      }
+      .comment {
+        font-size: 0.8rem;
+        padding: 5px 0;
+        padding-right: 1em;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        width: auto;
+        color: $main-gray-color;
+      }
+    }
+    .show-more {
+      padding: 10px;
+    }
+  }
+}
+
+.input-error {
+  color: red;
+}

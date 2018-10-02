@@ -1,0 +1,62 @@
+@import "../../../common.scss";
+
+.filter-container {
+  padding-top: 2em;
+  padding-bottom: 5em;
+  .group-title {
+    margin-left: 1em;
+    font-size: 1.5rem;
+    color: $third-font-color;
+  }
+
+  .filter-item-container {
+    margin-top: 0.5em;
+    .row {
+      margin: 0.2em 0;
+      .col-9{
+        padding-right: 0;
+      }
+      .filter-item {
+        padding-left: 2em;
+        color: $main-font-color;
+
+      }
+      .filter-radio-button {
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+.float-layer {
+  width: 100%;
+  position: fixed;
+  height: 3em;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    padding: 3px;
+    outline: 0;
+    font-family: $font-mon;
+    color: white;
+    background-color: $high-light-color;
+    width: 5em;
+    border-radius: 1em;
+  }
+
+
+}
+
+
+

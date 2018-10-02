@@ -1,0 +1,46 @@
+@import "../../../common.scss";
+
+.content-container {
+  .content {
+    margin-top: 20px;
+    h1 {
+      font-size: 1.4rem;
+      color: $pink-color;
+    }
+    .social {
+      .facebook {
+        a {
+          color: #3b5998;
+        }
+      }
+    }
+    .contact {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .item {
+        margin-top: 10px;
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+      .label {
+        margin-right: 5px;
+      }
+      .detail {
+        a {
+          color: $dark-color;
+          text-decoration: none;
+          border-bottom: 1px dotted $dark-color;
+        }
+        .social {
+          .facebook {
+            color: #3b5998;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

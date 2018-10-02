@@ -1,0 +1,23 @@
+<div class="card card-large">
+
+    <div class="cover">
+        <div class="thumbnail" [style.background-image]="thumbnail | safeImage"></div>
+    </div>
+    <div class="card-block">
+        <div class="d-flex flex-row">
+            <div class="p-2">
+            <avatar-view name={{author}} imageSrc={{avatar}} sizeType='M'></avatar-view>
+            <!--<img class="rounded-circle avatar" src="{{avatar}}" alt="test">-->
+            </div>
+            <div class="p-2">
+                <div class="card-title">{{ title | stringLimit : 50 }}</div>
+                <div class="meta">
+                    <span>{{author | stringLimit : 10}}</span>
+                    <span>{{views | countDisplay}} views</span>
+                    <span>{{comments| countDisplay}} comments</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

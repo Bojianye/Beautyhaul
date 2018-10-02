@@ -1,0 +1,17 @@
+<div class="card card-medium" (click)="linkFeed()">
+  <div class="medium">
+    <div class="cover">
+      <div class="thumbnail" [style.background-image]="thumbnail | safeImage"></div>
+    </div>
+    <div class="card-block">
+      <div class="card-title">{{ title | stringLimit : 30 }}</div>
+      <div class="meta">
+        <p>{{author | stringLimit : 15}}</p>
+        <p>
+          <span>{{views | countDisplay}} views</span>
+          <span>{{comments| countDisplay}} comments</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

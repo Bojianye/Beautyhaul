@@ -1,0 +1,15 @@
+<div class="header-close-container sticky-top">
+  <nav class="navbar navbar-pink navbar-font-color">
+    <div class="navbar-center navbar-brand">
+      <span class="branding">
+        <span class="title" *ngIf="title">{{title}}</span>
+      </span>
+    </div>
+    <button class="navbar-toggler navbar-toggler-left toggler" type="button" (click)="close()">
+        <i class="icon ion-close-round" aria-hidden="true"></i>
+    </button>
+    <button class="nav-loginBtn btn btn-link" *ngIf="buttonTitle" (click)="rightButtonDidClicked()" type="button">
+      {{buttonTitle}}
+    </button>
+  </nav>
+</div>

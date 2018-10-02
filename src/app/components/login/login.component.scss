@@ -1,0 +1,40 @@
+@import "../../../common";
+
+.login-container {
+  .container {
+    @media screen and (max-width: $s-screen) {
+        padding: 0;
+        overflow: hidden;
+    }
+    .hero-bg {
+      @media screen and (min-width: $m-screen) {
+        display: none;
+      }
+      background: url('https://s3-ap-southeast-2.amazonaws.com/stylish-ui-resources/static/loginheader.jpg') 0 0 no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 200px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+    .title {
+      font-size: 1.3rem;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+    .login-access {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .disclaimer {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}

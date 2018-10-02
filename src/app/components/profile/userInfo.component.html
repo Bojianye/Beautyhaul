@@ -1,0 +1,110 @@
+<app-common-navigation-bar [title]="'Profile'" [buttonTitle]="'Save'" (rightButton)="saveButtonDidClicked()"></app-common-navigation-bar>
+<div id="profile-container">
+  <div class="user-profile-avatar">
+      <avatar-view name={{userInfo.name}} imageSrc={{userInfo.avatar}} sizeType="XL"></avatar-view>
+  </div>
+
+
+  <div class="panel panel-default" id="user-profile-container">
+    <div class="panel-heading">ACCOUNT</div>
+    <div class="panel-body">
+      <div class="account-info-area">
+        <md-input-container class="input-text" type="search">
+          <input mdInput placeholder="First Name" [(ngModel)]="firstname" [disabled]=!editable>
+        </md-input-container>
+
+        <md-input-container class="input-text small-space">
+          <input mdInput placeholder="Last Name" [(ngModel)]="lastname" [disabled]=!editable>
+        </md-input-container>
+
+        <md-input-container class="input-text small-space">
+          <input mdInput placeholder="Email" value={{email}} disabled>
+        </md-input-container>
+
+        <md-select placeholder="Gender" class="input-select" *ngIf="editable" (change)="genderChanged($event)"
+                   [(ngModel)]="userGenderCode">
+          <md-option *ngFor="let item of gendersList" [value]="item.code">
+            {{ item.value }}
+          </md-option>
+        </md-select>
+
+        <div class="always-show-title">
+          <label>Birthday</label>
+        </div>
+
+        <table id="date-selector-container" cellspacing="0" class="date-select-table">
+          <tr>
+            <td>
+              <md-select placeholder="Day" class="date-select"
+                         [(ngModel)]="userDay"
+                         [disabled]=!editable
+                         (change)="birthdayChanged($event)"
+              >
+                <md-option *ngFor="let item of dayList" [value]="item">
+                  {{ item }}
+                </md-option>
+              </md-select>
+            </td>
+            <td class="table-td">
+              <md-select placeholder="Month" class="date-select"
+                         [disabled]=!editable
+                         (change)="birthdayChanged($event)"
+                         [(ngModel)]="userMonth">
+                <md-option *ngFor="let item of MonthList" [value]="item.value">
+                  {{ item.code }}
+                </md-option>
+              </md-select>
+            </td>
+            <td class="table-td">
+              <md-select placeholder="Year" class="date-select"
+                         [disabled]=!editable
+                         (change)="birthdayChanged($event)"
+                         [(ngModel)]="userYear">
+                <md-option *ngFor="let item of YearList" [value]="item">
+                  {{ item }}
+                </md-option>
+              </md-select>
+            </td>
+          </tr>
+        </table>
+        <div class="comment-alert" *ngIf="birthdayAlert">
+          <span class="ion-android-warning"></span> Date of Birthday error.
+        </div>
+
+        <md-select placeholder="Country" class="input-select after-birthday" *ngIf="editable"
+                   (change)="countrySelected($event)"
+                   [(ngModel)]="userCountryCode">
+          <md-option *ngFor="let item of countries" [value]="item.code">
+            {{ item.value }}
+          </md-option>
+        </md-select>
+
+      </div>
+    </div>
+
+    <div class="panel-heading">PREFERENCES</div>
+    <div class="panel-body">
+      <div class="account-info-area">
+        <md-select placeholder="Expenditure" class="input-select expenditure" *ngIf="editable" (change)="expesChanged($event)"
+                   [(ngModel)]="userExpCode">
+          <md-option *ngFor="let item of expsList" [value]="item.code">
+            {{ item.value }}
+          </md-option>
+        </md-select>
+
+        <div class="always-show-title">
+          <label class="always-show-title" *ngIf="isuserSkinConcern || editable">Skin Concern</label>
+        </div>
+        <div *ngIf="editable">
+          <section class="eth-section input-select">
+            <md-checkbox class="eth-section" *ngFor="let item of skinConcernsList"
+                         (change)="userSkinConcernChanged($event,item.code)"
+                         [checked]="isSkinConcernItemChecked(item)"
+            >{{item.value}}
+            </md-checkbox>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

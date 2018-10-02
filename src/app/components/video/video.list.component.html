@@ -1,0 +1,47 @@
+<app-common-navigation-bar [title]="title" [buttonTitle]="filterTitle" (rightButton)="filterBtnDidClicked()"></app-common-navigation-bar>
+<div class="header-back-container">
+  <div class="trends-container">
+    <div class="d-flex flex-lg-nowrap trends-tags">
+      <div class="p-2 d-inline-flex tag" *ngFor="let tag of topicList">
+        <a (click)="selectTag(tag)" [ngClass]="{'selected-tag':tag.selected}">{{tag.displayName}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="video-list-container">
+  <div class="container">
+    <div class="video-loading" *ngIf="isLoading">
+      <div class="bh-spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <div class="video-loading" *ngIf="!hasFeeds">
+      Sorry, no results yet.
+    </div>
+    <div class="row">
+      <div class="item col-sm-4" *ngFor="let feed of feeds">
+        <h2 id="{{feed.id}}"></h2>
+        <div class="video-card" (click)="linkFeed(feed.id)">
+          <feed-card-large
+            title={{feed.title}}
+            thumbnail={{feed.thumbnail}}
+            avatar={{feed.author.avatar}}
+            author={{feed.author.displayName}}
+            views={{feed.viewCount}}
+            comments={{feed.commentCount}}
+            feedId={{feed.id}}>
+          </feed-card-large>
+        </div>
+      </div>
+    </div>
+    <!--<div class="show-more">-->
+      <!--<button type='button' class="btn btn-primary-outline btn-block rounded-5" (click)="showMore()"-->
+              <!--*ngIf="nextPageToken">-->
+        <!--<span *ngIf="isShowMoreLoading"><i class="fa fa-spinner fa-spin fa-fw"></i><span-->
+          <!--class="sr-only">Loading...</span></span>-->
+        <!--Show more-->
+      <!--</button>-->
+    <!--</div>-->
+  </div>
+</div>

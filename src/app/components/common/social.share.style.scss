@@ -1,0 +1,62 @@
+@import "../../../common.scss";
+
+.social-share-container {
+  .modal-title {
+    color: $pink-color;
+  }
+  .share-buttons {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    .facebook {
+      color: $facebook-color;
+    }
+    .google {
+      color: $google-color;
+    }
+    .twitter {
+      color: $twitter-color;
+    }
+    .email {
+      color: $email-color;
+    }
+  }
+}
+.share-icon {
+  cursor: pointer;
+  margin-right: 5px;
+  font-weight: 400;
+  i {
+    font-size: 1.45rem;
+    @media screen and (max-width: $s-screen) {
+      font-size: 1.45rem;
+    }
+    @media screen and (min-width: $m-screen) {
+      font-size: 1rem;
+    }
+    @media screen and (min-width: $l-screen) {
+      font-size: 1.45rem;
+    }
+    margin-right: 2px;
+    color: $pink-color;
+    vertical-align: middle;
+  }
+  .counter {
+    vertical-align: middle;
+    font-size: 0.9rem;
+    @media screen and (max-width: $s-screen) {
+      font-size: 0.9rem;
+    }
+    @media screen and (min-width: $m-screen) {
+      font-size: 0.7rem;
+    }
+    @media screen and (min-width: $l-screen) {
+      font-size: 0.9rem;
+    }
+  }
+}

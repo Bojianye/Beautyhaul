@@ -1,0 +1,41 @@
+  <header-navigation recommendActive="{{'active'}}"></header-navigation>
+  <div id="navigation-bar-container">
+    <nav md-tab-nav-bar class="navigation-bar">
+      <a md-tab-link
+         [routerLink]="['foryou']" (click)="activeLinkIndex = 1"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="activeLinkIndex === 1"
+         class="navigation-item"
+         [ngClass]="{ 'activted': activeLinkIndex === 1}"
+      >
+        FOR YOU
+      </a>
+      <a md-tab-link
+         [routerLink]="['makeup']" (click)="activeLinkIndex = 2"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="activeLinkIndex === 2"
+         class="navigation-item"
+         [ngClass]="{ 'activted': activeLinkIndex === 2}"
+      >
+        MAKEUP
+      </a>
+      <a md-tab-link
+         [routerLink]="['skincare']" (click)="activeLinkIndex = 3"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="activeLinkIndex === 3"
+         class="navigation-item"
+         [ngClass]="{ 'activted': activeLinkIndex === 3}"
+      >
+        SKIN CARE
+      </a>
+      <!--<a md-tab-link-->
+         <!--[routerLink]="['trending']" (click)="activeLinkIndex = 4"-->
+         <!--routerLinkActive #rla="routerLinkActive"-->
+         <!--[active]="activeLinkIndex === 4"-->
+         <!--class="navigation-item"-->
+      <!--&gt;-->
+        <!--Trending-->
+      <!--</a>-->
+    </nav>
+  </div>
+<router-outlet></router-outlet>

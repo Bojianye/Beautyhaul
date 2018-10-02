@@ -1,0 +1,30 @@
+<div class="header-navigation-container sticky-top">
+  <nav class="navbar navbar-pink navbar-font-color">
+    <div class="navbar-on-left navbar-brand">
+        <span class="branding">
+          <a routerLink="/"><span>beautyhaul</span></a>
+        </span>
+    </div>
+    <div class="nav-right-button-group" id="nav-right-button-group">
+      <div class="nav-loginBtn btn btn-link" *ngIf="isLogin" (click)="loginBtnDidClicked()">
+        <i class="ion-android-person login-person" aria-hidden="true"></i>
+      </div>
+      <div class="nav-loginBtn btn btn-link" *ngIf="!isLogin" (click)="loginBtnDidClicked()">
+        Sign in
+      </div>
+      <div class="menu-button">
+        <div class="more-vertical" (click)="showDropDown()">
+          <i class="icon ion-android-more-vertical" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-menu" [ngClass]="{'showDropdown' : dropdown}">
+          <div class="dropdown-item" (click)="contactBtnDidClicked()">Contact</div>
+          <div class="dropdown-item" (click)="aboutUsBtnDidClicked()">About us</div>
+          <div class="dropdown-item" (click)="privacyBtnDidClicked()">Privacy</div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </nav>
+</div>

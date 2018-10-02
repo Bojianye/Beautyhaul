@@ -1,0 +1,59 @@
+@import "../../../../common";
+
+.video-recommend-container {
+  margin-top: 1rem;
+  .category {
+    width: 100%;
+    overflow: auto;
+
+  }
+
+  .video-item {
+    width: 196px;
+    height: 220px;
+    margin-left: 1em;
+  }
+
+  .category-title-bar {
+    margin: 0 0.5rem 0.5rem 1rem;
+  }
+  .category-title {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .category-show-more {
+    color: $grey-dark-color;
+    text-align: right;
+
+  }
+  .col-8{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-4{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .see-all{
+    padding-right: 5px;
+    font-size: 0.8rem;
+    padding-top: 2px;
+    .icon{
+      padding-bottom: 5px;
+      padding-left: 3px;
+      font-size: 0.6rem;
+    }
+
+    .chevron-right{
+      margin-bottom: 3px;
+    }
+  }
+
+  .swiper-content{
+    margin-top: 5px;
+    .swiper-wrapper{
+    }
+    //border-bottom: 1px rgba(0,0,0,0.1) solid;
+  }
+}

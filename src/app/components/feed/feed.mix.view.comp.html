@@ -1,0 +1,35 @@
+<div class="feed-view-container header-offset">
+  <div class="container mix-view">
+    <div class="card rounded-0 border-0">
+      <div class="card-block mixed-header">
+        <div class="title">{{feed.title}}</div>
+        <feed-action-view [feed]="feed"></feed-action-view>
+        <div class="d-flex flex-row author">
+          <div class="p-2">
+            <avatar-view name={{feed.authorDisplayName}} imageSrc={{feed.authorAvatar}} sizeType='S'></avatar-view>
+          </div>
+          <div class="p-2">
+            <div class="card-subtitle">{{feed.authorDisplayName}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-block">
+        <div class="section" *ngFor="let section of feed.sections">
+            <div class="section-text" *ngIf="section.sectionType === 'TEXT'">
+                <h2>{{section.title}}</h2>
+                <p class="content">{{section.content}}</p>
+            </div>
+            <div class="section-image" *ngIf="section.sectionType === 'IMAGE'">
+                <img src="{{section.content}}" class="img-fluid" />
+            </div>
+            <div class="section-video" *ngIf="section.sectionType === 'VIDEO'">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" [src]='feed.youtubeHost + section.content | safeUrl'></iframe>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <feed-comments [feed]="feed"></feed-comments>
+  </div>
+</div>

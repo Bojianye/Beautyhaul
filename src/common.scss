@@ -1,0 +1,141 @@
+$s-screen: 576px;
+$m-screen: 768px;
+$l-screen: 992px;
+$xl-screen: 1200px;
+
+// deprecated
+$screen-small: 767px;
+
+$font-lato: 'Lato', sans-serif;
+$font-mon: montserrat;
+$font-play: Playfair Display;
+
+// color
+$pink-color: #ffa8cc;
+$tan-color: #81dcdd;
+$grey-color: #F7F5F5;
+$grey-light-color: #F4F4F4;
+$grey-dark-color: #565454;
+
+$facebook-color: #3E5D97;
+$google-color: #DA4C3E;
+$twitter-color: #1DADEA;
+$email-color: #565454;
+
+// deprecated
+$pink-highlight-color: #be5c84;
+$dark-color: #232222;
+$light-grey: #fbfbf4;
+$lighter-grey: #cccccc;
+$dark-grey: #413c3c;
+
+//new color
+$main-font-color: rgba(0, 0, 0, 0.87);
+$second-font-color:rgba(0, 0, 0, 0.54);
+$third-font-color:rgba(0, 0, 0, 0.38);
+$main-background-color:#ffffff;
+$nav-background-color:#2F2B3A;
+$nav-text-color:#ffffff;
+$nav-second-text-color:rgba(255,255,255,0.8);
+$main-gray-color:#757575;
+$high-light-color:#ff4081;
+$high-light-dark:#c60055;
+$high-light-light:#ff79b0;
+
+// header navigation
+$nav-bar-height: 40px;
+nav {
+  min-height: $nav-bar-height;
+  .toggler {
+    left: 0;
+    color: $nav-text-color;
+    background: none;
+    border: none;
+    .navbar-toggler-icon {
+      color: white;
+    }
+  }
+  .navbar-brand {
+    float : none;
+    font-family: $font-mon;
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+    a {
+      font-size: 1.2rem;
+      color: $nav-text-color;
+      text-decoration: none;
+    }
+    .branding {
+      .pink {
+        color: $nav-text-color;
+      }
+      .white {
+        color: white;
+      }
+    }
+  }
+  .navbar-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    float: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+// loading animation icon
+.bh-spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: $high-light-color;
+    border-radius: 100%;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+
+  @keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+}

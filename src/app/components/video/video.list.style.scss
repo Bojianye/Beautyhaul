@@ -1,0 +1,122 @@
+@import "../../../common.scss";
+
+.header-back-container {
+  height: 39px;
+  position: fixed;
+  top: $nav-bar-height;
+  width: 100%;
+  z-index: 3;
+  .navbar-pink {
+    background-color: $dark-color;
+  }
+  .navbar-font-color {
+    color: white;
+  }
+  .breadcrumb-container {
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    .breadcrumb {
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 0.4rem 1rem;
+      background-color: $grey-color;
+      .breadcrumb-item {
+        color: #00819e;
+        float: none;
+        font-size: 1rem;
+        font-family: $font-mon;
+        a {
+          color: #00819e;
+        }
+      }
+      .active {
+        color: $dark-color;
+        font-weight: 500;
+      }
+    }
+  }
+  .trends-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    min-height: 2rem;
+    background-color: $nav-background-color;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    .trends-label {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.9rem 0.3rem 0.9rem 0.7rem;
+      font-weight: bold;
+    }
+    .trends-tags {
+      overflow-x: auto;
+      .tag {
+        line-height: 29px;
+        margin-right: 3px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        background-color: $nav-background-color;
+        color: $nav-second-text-color;
+        a {
+          line-height: 37px;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        .selected-tag {
+          color: $high-light-color;
+          border-bottom: 2px $high-light-color solid;
+        }
+      }
+    }
+  }
+}
+
+.video-list-container {
+  position: relative;
+  top: 80px;
+  margin-bottom: 20px;
+  @media screen and (min-width: $m-screen) {
+    margin-top: 10px;
+  }
+  .container {
+    @media screen and (max-width: $s-screen) {
+      padding: 0;
+      overflow: hidden;
+    }
+    .video-loading {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .item {
+      margin-top: 0.5rem;
+
+      .video-card{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        @media screen and (min-width: $s-screen){
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+      padding-bottom: 0.5rem;
+    }
+  }
+  .show-more {
+    margin-top: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.p-2{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+
+

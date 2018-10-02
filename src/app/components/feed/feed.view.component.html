@@ -1,0 +1,4 @@
+<app-common-navigation-bar [title]="title"></app-common-navigation-bar>
+<feed-video-view [feed]="feed" *ngIf="feed.type === 'VIDEO'"></feed-video-view>
+<feed-mix-view [feed]="feed" *ngIf="feed.type === 'MIXED'"></feed-mix-view>
+

@@ -1,0 +1,39 @@
+@import "../../../common";
+
+#navigation-bar-container {
+  text-align: center;
+  background-color: $nav-background-color;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 40px;
+  z-index: 999;
+  box-shadow: 0px 1px 2px $third-font-color;
+}
+.mat-tab-link{
+  opacity: 1;
+  padding: 0;
+  height: 40px;
+  line-height: 38px;
+}
+.mat-tab-header, .mat-tab-nav-bar {
+  border-bottom: none;
+}
+.mat-ink-bar {
+  background-color: $high-light-color;
+}
+.navigation-bar a {
+  text-decoration: none;
+  color: $nav-second-text-color;
+}
+
+.navigation-bar a:focus a:hover {
+  color: $pink-color;
+}
+
+.navigation-item {
+  width: 30%;
+}
+.activted{
+  color: $high-light-color !important;
+}
+
